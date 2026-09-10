@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destinations | TraviXa</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Destinations CSS -->
+    <link rel="stylesheet" href="css/destinations.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="navbar">
+
+        <a href="home.html" class="brand">
+
+            <img
+                src="images/travixa-logo.png"
+                alt="TraviXa Logo"
+                class="brand-logo"
+            >
+
+            <div class="brand-text">
+
+                <strong>
+                    Travi<span>X</span>a
+                </strong>
+
+                <small>
+                    Plan Smarter, Travel Better
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="destinations.html" class="active">
+                Destinations
+            </a>
+
+            <a href="home.html#planner">
+                Planner
+            </a>
+
+            <a href="home.html#about">
+                About
+            </a>
+
+            <a href="home.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="signup.html" class="signup-btn">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="destinations.html" class="active">
+            Destinations
+        </a>
+
+        <a href="home.html#planner">
+            Planner
+        </a>
+
+        <a href="home.html#about">
+            About
+        </a>
+
+        <a href="home.html#contact">
+            Contact
+        </a>
+
+
+        <div class="mobile-menu-actions">
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="signup.html">
+                Sign Up
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="destination-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                ✦ EXPLORE THE WORLD
+            </span>
+
+            <h1>
+                Discover places
+                <span>worth travelling to.</span>
+            </h1>
+
+            <p>
+                Explore inspiring destinations, discover new experiences
+                and find the perfect place for your next journey.
+            </p>
+
+
+            <!-- Search -->
+
+            <div class="destination-search">
+
+                <span class="search-icon">
+                    🔎
+                </span>
+
+                <input
+                    type="text"
+                    id="destinationSearch"
+                    placeholder="Search destinations..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="searchBtn"
+                >
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DESTINATIONS AREA ================= -->
+
+    <main class="destinations-wrapper">
+
+        <!-- Section Header -->
+
+        <section class="destination-heading">
+
+            <div>
+
+                <span class="section-label">
+                    EXPLORE DESTINATIONS
+                </span>
+
+                <h2>
+                    Where will you go next?
+                </h2>
+
+                <p>
+                    From relaxing beaches to breathtaking mountains,
+                    discover destinations for every kind of traveller.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <div class="destination-filters" id="destinationFilters">
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="beach"
+            >
+                🏖️ Beach
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="mountain"
+            >
+                🏔️ Mountains
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="heritage"
+            >
+                🏛️ Heritage
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="city"
+            >
+                🌆 City
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="adventure"
+            >
+                🧗 Adventure
+            </button>
+
+        </div>
+
+
+        <!-- ================= DESTINATION GRID ================= -->
+
+        <section
+            class="destination-grid"
+            id="destinationGrid"
+        >
+
+            <!-- Dubai -->
+
+            <article
+                class="destination-card large-card"
+                data-category="city"
+                data-name="Dubai"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/dubai.jpg"
+                        alt="Dubai"
+                    >
+
+                    <span class="destination-tag">
+                        TRENDING
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Dubai"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇦🇪 United Arab Emirates
+                    </div>
+
+                    <h3>
+                        Dubai
+                    </h3>
+
+                    <p>
+                        Experience futuristic skylines, luxury,
+                        desert adventures and unforgettable city life.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Premium
+                        </span>
+
+                        <span>
+                            ☀️ Oct – Apr
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Dubai"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Dubai"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Goa -->
+
+            <article
+                class="destination-card"
+                data-category="beach"
+                data-name="Goa"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/goa.jpg"
+                        alt="Goa"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Goa"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇳 India
+                    </div>
+
+                    <h3>
+                        Goa
+                    </h3>
+
+                    <p>
+                        Beaches, sunsets, coastal charm and
+                        laid-back tropical escapes.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Standard
+                        </span>
+
+                        <span>
+                            ☀️ Nov – Feb
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Goa"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Goa"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Kashmir -->
+
+            <article
+                class="destination-card"
+                data-category="mountain"
+                data-name="Kashmir"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/kashmir.jpg"
+                        alt="Kashmir"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Kashmir"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇳 India
+                    </div>
+
+                    <h3>
+                        Kashmir
+                    </h3>
+
+                    <p>
+                        Snow-capped mountains, peaceful valleys,
+                        lakes and breathtaking landscapes.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Standard
+                        </span>
+
+                        <span>
+                            ❄️ Mar – Jun
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Kashmir"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Kashmir"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Paris -->
+
+            <article
+                class="destination-card"
+                data-category="city"
+                data-name="Paris"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/paris.jpg"
+                        alt="Paris"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Paris"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇫🇷 France
+                    </div>
+
+                    <h3>
+                        Paris
+                    </h3>
+
+                    <p>
+                        Iconic landmarks, elegant streets, art,
+                        culture and unforgettable city moments.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Premium
+                        </span>
+
+                        <span>
+                            🌸 Apr – Jun
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Paris"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Paris"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Jaipur -->
+
+            <article
+                class="destination-card"
+                data-category="heritage"
+                data-name="Jaipur"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/jaipur.jpg"
+                        alt="Jaipur"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Jaipur"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇳 India
+                    </div>
+
+                    <h3>
+                        Jaipur
+                    </h3>
+
+                    <p>
+                        Royal palaces, forts, colourful markets
+                        and timeless Rajasthani heritage.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Budget Friendly
+                        </span>
+
+                        <span>
+                            ☀️ Oct – Mar
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Jaipur"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Jaipur"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Manali -->
+
+            <article
+                class="destination-card"
+                data-category="mountain"
+                data-name="Manali"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/manali.jpg"
+                        alt="Manali"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Manali"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇳 India
+                    </div>
+
+                    <h3>
+                        Manali
+                    </h3>
+
+                    <p>
+                        Himalayan landscapes, rivers, cafés and
+                        adventure-filled mountain escapes.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Budget Friendly
+                        </span>
+
+                        <span>
+                            ❄️ Oct – Jun
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Manali"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Manali"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Bali -->
+
+            <article
+                class="destination-card"
+                data-category="beach"
+                data-name="Bali"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/bali.jpg"
+                        alt="Bali"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Bali"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇩 Indonesia
+                    </div>
+
+                    <h3>
+                        Bali
+                    </h3>
+
+                    <p>
+                        Tropical beaches, lush landscapes, temples
+                        and peaceful island experiences.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Premium
+                        </span>
+
+                        <span>
+                            ☀️ Apr – Oct
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Bali"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Bali"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Rome -->
+
+            <article
+                class="destination-card"
+                data-category="heritage"
+                data-name="Rome"
+            >
+
+                <div class="destination-image">
+
+                    <img
+                        src="images/destinations/rome.jpg"
+                        alt="Rome"
+                    >
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Save Rome"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="destination-content">
+
+                    <div class="destination-location">
+                        🇮🇹 Italy
+                    </div>
+
+                    <h3>
+                        Rome
+                    </h3>
+
+                    <p>
+                        Ancient history, remarkable architecture,
+                        art and unforgettable Italian culture.
+                    </p>
+
+
+                    <div class="destination-meta">
+
+                        <span>
+                            💰 Premium
+                        </span>
+
+                        <span>
+                            🌸 Apr – Jun
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-actions">
+
+                        <button
+                            class="explore-btn"
+                            type="button"
+                            data-destination="Rome"
+                        >
+                            Explore
+                        </button>
+
+                        <button
+                            class="plan-btn"
+                            type="button"
+                            data-plan="Rome"
+                        >
+                            Plan This Trip →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- No Results -->
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <div class="no-results-icon">
+                🌍
+            </div>
+
+            <h3>
+                Destination not found
+            </h3>
+
+            <p>
+                Try searching for another destination.
+            </p>
+
+        </div>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="destination-cta">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    READY TO GO?
+                </span>
+
+                <h2>
+                    Turn your destination
+                    into a complete journey.
+                </h2>
+
+                <p>
+                    Choose a place you love and let TraviXa
+                    help you build a smarter travel plan.
+                </p>
+
+                <a
+                    href="home.html#planner"
+                    class="cta-btn"
+                >
+                    Start Planning →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <div class="brand">
+
+                    <img
+                        src="images/travixa-logo.png"
+                        alt="TraviXa Logo"
+                        class="brand-logo"
+                    >
+
+                    <div class="brand-text">
+
+                        <strong>
+                            Travi<span>X</span>a
+                        </strong>
+
+                        <small>
+                            Plan Smarter, Travel Better
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Your smarter companion for planning memorable
+                    journeys.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="home.html#destinations">
+                    Destinations
+                </a>
+
+                <a href="home.html#planner">
+                    Planner
+                </a>
+
+                <a href="home.html#about">
+                    About
+                </a>
+
+                <a href="home.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 TraviXa. All Rights Reserved.
+            </p>
+
+            <p>
+                Smart travel starts here.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= DESTINATION MODAL ================= -->
+
+    <div
+        class="destination-modal"
+        id="destinationModal"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-image"
+                id="modalImage"
+            ></div>
+
+            <div class="modal-content">
+
+                <span
+                    class="modal-location"
+                    id="modalLocation"
+                ></span>
+
+                <h2 id="modalTitle">
+                    Destination
+                </h2>
+
+                <p id="modalDescription"></p>
+
+                <div class="modal-details">
+
+                    <div>
+                        <small>
+                            Best Time
+                        </small>
+
+                        <strong id="modalBestTime">
+                            —
+                        </strong>
+                    </div>
+
+                    <div>
+                        <small>
+                            Budget
+                        </small>
+
+                        <strong id="modalBudget">
+                            —
+                        </strong>
+                    </div>
+
+                    <div>
+                        <small>
+                            Ideal Stay
+                        </small>
+
+                        <strong id="modalStay">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="modal-actions">
+
+                    <button
+                        class="modal-plan-btn"
+                        id="modalPlanBtn"
+                        type="button"
+                    >
+                        Plan This Trip →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/destinations.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+
+</html>

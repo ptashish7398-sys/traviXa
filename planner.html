@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Planner | TraviXa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="navbar">
+
+        <a href="home.html" class="brand">
+
+            <img
+                src="images/travixa-logo.png"
+                alt="TraviXa Logo"
+                class="brand-logo"
+            >
+
+            <div class="brand-text">
+                <strong>Travi<span>X</span>a</strong>
+                <small>Plan Smarter, Travel Better</small>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="home.html#destinations">
+                Destinations
+            </a>
+
+            <a href="planner.html" class="active">
+                Planner
+            </a>
+
+            <a href="home.html#about">
+                About
+            </a>
+
+            <a href="home.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="signup.html" class="signup-btn">
+                Sign Up
+            </a>
+
+        </div>
+
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="home.html#destinations">
+            Destinations
+        </a>
+
+        <a href="planner.html" class="active">
+            Planner
+        </a>
+
+        <a href="home.html#about">
+            About
+        </a>
+
+        <a href="home.html#contact">
+            Contact
+        </a>
+
+
+        <div class="mobile-menu-actions">
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="signup.html">
+                Sign Up
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="planner-hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span>✦</span>
+                SMART TRIP PLANNER
+            </div>
+
+
+            <h1>
+                Build your perfect
+                <span>journey.</span>
+            </h1>
+
+
+            <p>
+                Tell us what you want from your trip and TraviXa
+                will help you shape a smarter travel plan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PLANNER AREA ================= -->
+
+    <main class="planner-wrapper">
+
+        <section class="planner-grid">
+
+            <!-- ================= FORM CARD ================= -->
+
+            <div class="planner-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            TRIP DETAILS
+                        </span>
+
+                        <h2>
+                            Where do you want to go?
+                        </h2>
+
+                        <p>
+                            Customize your journey according to your
+                            destination, dates and travel preferences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="heading-icon">
+                        ✈
+                    </div>
+
+                </div>
+
+
+
+                <form id="plannerForm">
+
+                    <!-- Destination -->
+
+                    <div class="form-group full-width">
+
+                        <label for="destination">
+                            Destination
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                📍
+                            </span>
+
+                            <input
+                                type="text"
+                                id="destination"
+                                placeholder="Where are you going?"
+                                autocomplete="off"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div
+                            class="suggestions"
+                            id="destinationSuggestions"
+                        >
+
+                            <button
+                                type="button"
+                                data-place="Dubai"
+                            >
+                                Dubai
+                            </button>
+
+                            <button
+                                type="button"
+                                data-place="Goa"
+                            >
+                                Goa
+                            </button>
+
+                            <button
+                                type="button"
+                                data-place="Kashmir"
+                            >
+                                Kashmir
+                            </button>
+
+                            <button
+                                type="button"
+                                data-place="Paris"
+                            >
+                                Paris
+                            </button>
+
+                            <button
+                                type="button"
+                                data-place="Jaipur"
+                            >
+                                Jaipur
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Dates -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="startDate">
+                                Start Date
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    📅
+                                </span>
+
+                                <input
+                                    type="date"
+                                    id="startDate"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="endDate">
+                                End Date
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    📅
+                                </span>
+
+                                <input
+                                    type="date"
+                                    id="endDate"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Travellers & Budget -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="travellers">
+                                Travellers
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    👥
+                                </span>
+
+                                <select
+                                    id="travellers"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select travellers
+                                    </option>
+
+                                    <option value="1">
+                                        1 Traveller
+                                    </option>
+
+                                    <option value="2">
+                                        2 Travellers
+                                    </option>
+
+                                    <option value="3">
+                                        3 Travellers
+                                    </option>
+
+                                    <option value="4">
+                                        4 Travellers
+                                    </option>
+
+                                    <option value="5">
+                                        5 Travellers
+                                    </option>
+
+                                    <option value="6+">
+                                        6+ Travellers
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="budget">
+                                Budget
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    ₹
+                                </span>
+
+                                <select
+                                    id="budget"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select budget
+                                    </option>
+
+                                    <option value="budget">
+                                        Budget Friendly
+                                    </option>
+
+                                    <option value="standard">
+                                        Standard
+                                    </option>
+
+                                    <option value="premium">
+                                        Premium
+                                    </option>
+
+                                    <option value="luxury">
+                                        Luxury
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Travel Type -->
+
+                    <div class="form-group">
+
+                        <label>
+                            What kind of trip?
+                        </label>
+
+                        <div class="travel-types">
+
+                            <label class="travel-option">
+
+                                <input
+                                    type="radio"
+                                    name="travelType"
+                                    value="Adventure"
+                                    checked
+                                >
+
+                                <span class="travel-option-content">
+
+                                    <span class="travel-icon">
+                                        🏔️
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Adventure
+                                        </strong>
+
+                                        <small>
+                                            Explore & discover
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="travel-option">
+
+                                <input
+                                    type="radio"
+                                    name="travelType"
+                                    value="Relaxation"
+                                >
+
+                                <span class="travel-option-content">
+
+                                    <span class="travel-icon">
+                                        🏖️
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Relaxation
+                                        </strong>
+
+                                        <small>
+                                            Slow & peaceful
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="travel-option">
+
+                                <input
+                                    type="radio"
+                                    name="travelType"
+                                    value="Culture"
+                                >
+
+                                <span class="travel-option-content">
+
+                                    <span class="travel-icon">
+                                        🏛️
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Culture
+                                        </strong>
+
+                                        <small>
+                                            History & heritage
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="travel-option">
+
+                                <input
+                                    type="radio"
+                                    name="travelType"
+                                    value="Family"
+                                >
+
+                                <span class="travel-option-content">
+
+                                    <span class="travel-icon">
+                                        👨‍👩‍👧
+                                    </span>
+
+                                    <span>
+
+                                        <strong>
+                                            Family
+                                        </strong>
+
+                                        <small>
+                                            Fun for everyone
+                                        </small>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Stay -->
+
+                    <div class="form-group">
+
+                        <label for="stay">
+                            Stay Preference
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🏨
+                            </span>
+
+                            <select id="stay">
+
+                                <option value="hotel">
+                                    Hotel
+                                </option>
+
+                                <option value="resort">
+                                    Resort
+                                </option>
+
+                                <option value="hostel">
+                                    Hostel
+                                </option>
+
+                                <option value="homestay">
+                                    Homestay
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Generate -->
+
+                    <button
+                        type="submit"
+                        class="generate-btn"
+                        id="generateBtn"
+                    >
+
+                        <span>
+                            ✨
+                        </span>
+
+                        Generate My Trip
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ================= SIDE INFO ================= -->
+
+            <aside class="planner-side">
+
+                <div class="why-card">
+
+                    <div class="side-icon">
+                        ✨
+                    </div>
+
+                    <span class="section-label">
+                        WHY TRAVIXA?
+                    </span>
+
+                    <h3>
+                        Travel planning,
+                        <span>made simple.</span>
+                    </h3>
+
+                    <p>
+                        Create a personalized travel plan without
+                        spending hours searching and organizing.
+                    </p>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Personalized planning
+                            </strong>
+
+                            <p>
+                                Built around your preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Smart itinerary
+                            </strong>
+
+                            <p>
+                                Organize your days efficiently.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Budget conscious
+                            </strong>
+
+                            <p>
+                                Plan according to your budget.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tip-card">
+
+                    <div class="tip-top">
+
+                        <span>
+                            💡
+                        </span>
+
+                        <strong>
+                            TRAVEL TIP
+                        </strong>
+
+                    </div>
+
+                    <p>
+                        Start by choosing your destination and
+                        dates. You can refine the rest of your trip
+                        preferences below.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+
+        <!-- ================= GENERATED TRIP ================= -->
+
+        <section
+            class="generated-section"
+            id="generatedSection"
+        >
+
+            <div class="generated-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR TRIP
+                    </span>
+
+                    <h2 id="tripTitle">
+                        Your personalized itinerary
+                    </h2>
+
+                    <p id="tripSubtitle">
+                        Your generated travel plan will appear here.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="save-trip-btn"
+                    id="saveTripBtn"
+                >
+                    ♡ Save Trip
+                </button>
+
+            </div>
+
+
+
+            <div class="trip-summary">
+
+                <div class="summary-item">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Destination
+                        </small>
+
+                        <strong id="summaryDestination">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        📅
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Duration
+                        </small>
+
+                        <strong id="summaryDuration">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        👥
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Travellers
+                        </small>
+
+                        <strong id="summaryTravellers">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        💰
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Budget
+                        </small>
+
+                        <strong id="summaryBudget">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="itinerary"
+                id="itinerary"
+            >
+                <!-- Generated by JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <div class="brand">
+
+                    <img
+                        src="images/travixa-logo.png"
+                        alt="TraviXa Logo"
+                        class="brand-logo"
+                    >
+
+                    <div class="brand-text">
+
+                        <strong>
+                            Travi<span>X</span>a
+                        </strong>
+
+                        <small>
+                            Plan Smarter, Travel Better
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Your smarter companion for planning memorable
+                    journeys.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="home.html#planner">
+                    Planner
+                </a>
+
+                <a href="home.html#destinations">
+                    Destinations
+                </a>
+
+                <a href="home.html#about">
+                    About
+                </a>
+
+                <a href="home.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 TraviXa. All Rights Reserved.
+            </p>
+
+            <p>
+                Smart travel starts here.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/planner.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+
+</html>

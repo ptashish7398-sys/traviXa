@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | TraviXa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     MOBILE OVERLAY
+========================================= -->
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-logo">
+        <img src="images/travixa-logo.png" alt="TraviXa Logo">
+
+        <div class="brand-name">
+            Travi<span>X</span>a
+        </div>
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html" class="nav-item active">
+            <i class="fa-solid fa-grid-2"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="destinations.html" class="nav-item">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+
+        <a href="planner.html" class="nav-item">
+            <i class="fa-solid fa-route"></i>
+            <span>Plan Trip</span>
+        </a>
+
+        <a href="destinations.html" class="nav-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Destinations</span>
+        </a>
+
+        <a href="map.html" class="nav-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Map</span>
+        </a>
+
+        <a href="weather.html" class="nav-item">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>Weather</span>
+        </a>
+
+        <a href="saved-trips.html" class="nav-item">
+            <i class="fa-regular fa-heart"></i>
+            <span>Saved Trips</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a href="about.html" class="nav-item">
+            <i class="fa-regular fa-circle-question"></i>
+            <span>About</span>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <a href="home.html" class="nav-item" data-logout>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="travel-tip">
+            <i class="fa-solid fa-plane"></i>
+
+            <p>
+                Every journey begins with a single plan.
+            </p>
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- =====================================
+         TOPBAR
+    ====================================== -->
+
+    <header class="topbar">
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="topbar-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="dashboardSearch"
+                placeholder="Search destinations, trips..."
+            >
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <button class="notification-btn" id="notificationBtn">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+
+            <div class="user-profile">
+
+                <div class="user-avatar" id="userInitial">
+                    G
+                </div>
+
+                <div class="user-info">
+
+                    <strong id="dashboardUserName">
+                        Guest
+                    </strong>
+
+                    <span>
+                        Traveller
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         DASHBOARD CONTENT
+    ====================================== -->
+
+    <div class="dashboard-container">
+
+
+        <!-- =================================
+             WELCOME HERO
+        ================================== -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-overlay"></div>
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    <i class="fa-solid fa-sparkles"></i>
+                    YOUR TRAVEL SPACE
+                </span>
+
+
+                <h1>
+                    Your next journey
+                    <em>starts here.</em>
+                </h1>
+
+
+                <p>
+                    Discover beautiful destinations, plan unforgettable
+                    trips and keep all your travel plans in one place.
+                </p>
+
+
+                <div class="destination-search">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <input
+                        type="text"
+                        id="destinationSearch"
+                        placeholder="Where do you want to go?"
+                    >
+
+                    <button id="exploreSearchBtn">
+                        Explore
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             QUICK ACTIONS
+        ================================== -->
+
+        <section class="quick-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        QUICK ACCESS
+                    </span>
+
+                    <h2>
+                        Plan your journey
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <a href="planner.html" class="quick-card">
+
+                    <div class="quick-icon green">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+                        <h3>AI Itinerary</h3>
+                        <p>Create your travel plan</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </a>
+
+
+                <a href="map.html" class="quick-card">
+
+                    <div class="quick-icon blue">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h3>Interactive Map</h3>
+                        <p>Explore places & routes</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </a>
+
+
+                <a href="weather.html" class="quick-card">
+
+                    <div class="quick-icon orange">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+
+                    <div>
+                        <h3>Weather</h3>
+                        <p>Check your destination</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </a>
+
+
+                <a href="saved-trips.html" class="quick-card">
+
+                    <div class="quick-icon pink">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <h3>Saved Trips</h3>
+                        <p>Your favourite journeys</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             TRIPS + STATS
+        ================================== -->
+
+        <section class="dashboard-two-column">
+
+
+            <!-- UPCOMING TRIPS -->
+
+            <div class="content-card trips-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="section-label">
+                            YOUR JOURNEYS
+                        </span>
+
+                        <h2>
+                            Upcoming Trips
+                        </h2>
+                    </div>
+
+                    <a href="planner.html" class="view-link">
+                        Plan New
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="empty-trip" id="tripEmptyState">
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                    </div>
+
+                    <h3>
+                        No upcoming trips yet
+                    </h3>
+
+                    <p>
+                        Start planning your next adventure with TraviXa.
+                    </p>
+
+                    <a href="planner.html" class="green-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Plan a Trip
+                    </a>
+
+                </div>
+
+
+                <div class="trip-list" id="tripList"></div>
+
+            </div>
+
+
+
+            <!-- TRAVEL STATS -->
+
+            <div class="stats-card">
+
+                <div class="stats-image"></div>
+
+                <div class="stats-content">
+
+                    <span class="section-label light">
+                        YOUR TRAVEL STATS
+                    </span>
+
+                    <h2>
+                        Your journey,
+                        your story.
+                    </h2>
+
+
+                    <div class="stats-list">
+
+                        <div class="stat-item">
+
+                            <div>
+                                <strong id="tripCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Trips Planned
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-route"></i>
+
+                        </div>
+
+
+                        <div class="stat-item">
+
+                            <div>
+                                <strong id="destinationCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Destinations
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div class="stat-item">
+
+                            <div>
+                                <strong id="daysCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Days Explored
+                                </span>
+                            </div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             POPULAR DESTINATIONS
+        ================================== -->
+
+        <section class="popular-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        INSPIRATION
+                    </span>
+
+                    <h2>
+                        Popular destinations
+                    </h2>
+
+                </div>
+
+
+                <a href="destinations.html" class="view-link">
+                    View All
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="destination-grid">
+
+
+                <a href="destinations.html" class="destination-card">
+
+                    <img
+                        src="images/destinations/kashmir.jpg"
+                        alt="Kashmir"
+                    >
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+
+                        <span>
+                            Mountains
+                        </span>
+
+                        <h3>
+                            Kashmir
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+                <a href="destinations.html" class="destination-card">
+
+                    <img
+                        src="images/destinations/goa.jpg"
+                        alt="Goa"
+                    >
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+
+                        <span>
+                            Beach
+                        </span>
+
+                        <h3>
+                            Goa
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+                <a href="destinations.html" class="destination-card">
+
+                    <img
+                        src="images/destinations/dubai.jpg"
+                        alt="Dubai"
+                    >
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+
+                        <span>
+                            City Escape
+                        </span>
+
+                        <h3>
+                            Dubai
+                        </h3>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             RECENT SEARCHES
+        ================================== -->
+
+        <section class="recent-section content-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="section-label">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent Searches
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="recent-empty" id="recentSearches">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <p>
+                    Your recent searches will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CTA
+        ================================== -->
+
+        <section class="dashboard-cta">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    READY TO EXPLORE?
+                </span>
+
+                <h2>
+                    Turn your travel dreams
+                    into <em>real journeys.</em>
+                </h2>
+
+                <p>
+                    Build your perfect itinerary with TraviXa
+                    and start planning your next adventure.
+                </p>
+
+            </div>
+
+
+            <a href="planner.html" class="green-btn large-btn">
+
+                Start Planning
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="dashboard-footer">
+
+        <div class="footer-brand">
+
+            Travi<span>X</span>a
+
+        </div>
+
+        <p>
+            © 2026 TraviXa. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</main>
+
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

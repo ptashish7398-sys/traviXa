@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | TraviXa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Signup CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- =========================================
+             BACKGROUND
+        ========================================== -->
+
+        <div class="signup-background"></div>
+        <div class="signup-overlay"></div>
+
+
+        <!-- =========================================
+             LEFT TRAVEL SECTION
+        ========================================== -->
+
+        <section class="signup-travel-side">
+
+            <!-- Brand -->
+
+            <a href="login.html" class="signup-brand">
+
+                <img src="images/travixa-logo.png" alt="TraviXa Logo">
+
+                <div class="signup-brand-name">
+                    Travi<span>X</span>a
+                </div>
+
+            </a>
+
+
+            <!-- Travel Content -->
+
+            <div class="signup-travel-content">
+
+                <span class="signup-eyebrow">
+                    START YOUR JOURNEY
+                </span>
+
+                <h1>
+                    Your next<br>
+                    adventure <span>starts here.</span>
+                </h1>
+
+                <p>
+                    Create your TraviXa account and
+                    start planning smarter, exploring
+                    further and travelling better.
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="signup-features">
+
+                    <div class="signup-feature">
+
+                        <div class="signup-feature-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <div>
+                            <strong>Plan Smarter</strong>
+                            <small>Create personalized trips</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="signup-feature">
+
+                        <div class="signup-feature-icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+
+                        <div>
+                            <strong>Discover More</strong>
+                            <small>Find places worth exploring</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="signup-feature">
+
+                        <div class="signup-feature-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+
+                        <div>
+                            <strong>Save Your Favourites</strong>
+                            <small>Keep your journeys organized</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Trust Card -->
+
+            <div class="signup-trust-card">
+
+                <div class="signup-trust-icon">
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+
+                <div>
+                    <strong>Travel begins with a plan</strong>
+                    <span>Make every journey memorable with TraviXa</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RIGHT SIGNUP SECTION
+        ========================================== -->
+
+        <section class="signup-side">
+
+            <div class="signup-card">
+
+
+                <!-- Heading -->
+
+                <div class="signup-heading">
+
+                    <span class="signup-welcome">
+                        CREATE YOUR ACCOUNT
+                    </span>
+
+                    <h2>
+                        Begin your<br>
+                        <span>journey.</span>
+                    </h2>
+
+                    <p>
+                        Join TraviXa and start planning
+                        your perfect travel experience.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     SIGNUP FORM
+                ================================== -->
+
+                <form id="signupForm" novalidate>
+
+
+                    <!-- Full Name -->
+
+                    <div class="signup-form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="signup-input-wrapper">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                autocomplete="name">
+
+                        </div>
+
+                        <small id="fullNameError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="signup-form-group">
+
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <div class="signup-input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email" id="signupEmail" name="email" placeholder="Enter your email"
+                                autocomplete="email">
+
+                        </div>
+
+                        <small id="signupEmailError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Mobile + DOB -->
+
+                    <div class="signup-two-column">
+
+
+                        <!-- Mobile -->
+
+                        <div class="signup-form-group">
+
+                            <label for="mobile">
+                                Mobile Number
+                            </label>
+
+                            <div class="signup-input-wrapper">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input type="tel" id="mobile" name="mobile" placeholder="10-digit number"
+                                    inputmode="numeric" maxlength="10" autocomplete="tel">
+
+                            </div>
+
+                            <small id="mobileError" class="signup-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- Date of Birth -->
+
+                        <div class="signup-form-group">
+
+                            <label for="dob">
+                                Date of Birth
+                            </label>
+
+                            <div class="signup-input-wrapper">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <input type="date" id="dob" name="dob">
+
+                            </div>
+
+                            <small id="dobError" class="signup-error">
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Gender -->
+
+                    <div class="signup-form-group">
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <div class="signup-input-wrapper">
+
+                            <i class="fa-solid fa-venus-mars"></i>
+
+                            <select id="gender" name="gender">
+
+                                <option value="">
+                                    Select your gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                                <option value="Prefer not to say">
+                                    Prefer not to say
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <small id="genderError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="signup-form-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="signup-input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="signupPassword" name="password" placeholder="Create a password"
+                                autocomplete="new-password">
+
+                            <button type="button" class="signup-password-toggle" id="signupPasswordToggle"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small id="signupPasswordError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="signup-form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="signup-input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm your password" autocomplete="new-password">
+
+                            <button type="button" class="signup-password-toggle" id="confirmPasswordToggle"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small id="confirmPasswordError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="signup-terms">
+
+                        <label>
+
+                            <input type="checkbox" id="terms">
+
+                            <span>
+                                I agree to TraviXa's
+                                <a href="#">Terms & Conditions</a>
+                                and
+                                <a href="#">Privacy Policy</a>.
+                            </span>
+
+                        </label>
+
+                        <small id="termsError" class="signup-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Create Account -->
+
+                    <button type="submit" class="signup-button">
+
+                        <span>Create TraviXa Account</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+
+                <div class="signup-divider">
+
+                    <span>OR CONTINUE WITH</span>
+
+                </div>
+
+
+                <!-- Social Login -->
+
+                <div class="signup-social-buttons">
+
+
+                    <!-- Google -->
+
+                    <button type="button" class="signup-social-button" data-provider="Google">
+
+                        <span class="signup-brand-logo">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                <path fill="#4285F4"
+                                    d="M21.35 12.23c0-.79-.07-1.55-.2-2.23H12v4.22h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.38z" />
+
+                                <path fill="#34A853"
+                                    d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.52A9.75 9.75 0 0 0 12 21.75z" />
+
+                                <path fill="#FBBC05"
+                                    d="M6.54 13.83A5.86 5.86 0 0 1 6.23 12c0-.64.11-1.26.31-1.83V7.65H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.05 1.05 4.35l3.24-2.52z" />
+
+                                <path fill="#EA4335"
+                                    d="M12 6.14c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.83 3.16 14.63 2.25 12 2.25A9.75 9.75 0 0 0 3.3 7.65l3.24 2.52C7.31 7.86 9.46 6.14 12 6.14z" />
+
+                            </svg>
+
+                        </span>
+
+                        <span>Google</span>
+
+                    </button>
+
+
+                    <!-- Facebook -->
+
+                    <button type="button" class="signup-social-button" data-provider="Facebook">
+
+                        <span class="signup-brand-logo">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                <path fill="#1877F2"
+                                    d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.17 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.34l-.53 3.49h-2.81V24C19.61 23.17 24 18.1 24 12.07z" />
+
+                            </svg>
+
+                        </span>
+
+                        <span>Facebook</span>
+
+                    </button>
+
+
+                    <!-- GitHub -->
+
+                    <button type="button" class="signup-social-button" data-provider="GitHub">
+
+                        <span class="signup-brand-logo">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                <path fill="#181717"
+                                    d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.34-1.79-1.34-1.79-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.67-.31-5.47-1.35-5.47-5.99 0-1.32.47-2.4 1.24-3.25-.12-.3-.54-1.54.12-3.2 0 0 1.01-.33 3.3 1.24a11.45 11.45 0 0 1 6 0c2.29-1.57 3.3-1.24 3.3-1.24.66 1.66.24 2.9.12 3.2.77.85 1.24 1.93 1.24 3.25 0 4.65-2.8 5.67-5.48 5.97.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .3z" />
+
+                            </svg>
+
+                        </span>
+
+                        <span>GitHub</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- Login Link -->
+
+                <p class="signup-login-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+
+                <!-- Security -->
+
+                <div class="signup-security-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <strong>
+                            Your information is secure
+                        </strong>
+
+                        <span>
+                            TraviXa keeps your account information protected.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <footer class="signup-footer">
+
+                <span>
+                    © 2026 TraviXa. All Rights Reserved.
+                </span>
+
+                <div>
+
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help</a>
+
+                </div>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+     SUCCESS MODAL
+========================================== -->
+
+    <div class="success-modal" id="successModal" aria-hidden="true">
+
+        <div class="success-modal-overlay" id="successModalOverlay"></div>
+
+        <div class="success-modal-card" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2 id="successModalTitle">
+                Account Created Successfully!
+            </h2>
+
+            <p>
+                Welcome to TraviXa! Your account has been created successfully.
+                Let's start planning your next adventure.
+            </p>
+
+            <button type="button" class="success-modal-button" id="continueDashboard">
+
+                <span>Continue to Dashboard</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Signup JavaScript -->
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>
